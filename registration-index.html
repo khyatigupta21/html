@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+  </head>
+  <body class="bodyElement">
+    <style>
+      .h1 {
+        color: white;
+      }
+      .h3 {
+        color: white;
+      }
+      .form-container {
+        border-style: ridge;
+        padding: 2rem 2rem;
+        margin: 50px auto;
+        justify-content: space-between;
+        width: 28%;
+        min-width: 500px;
+        border-radius: 5px;
+      }
+      .inputElement {
+        display: block;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-style: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-align: justify;
+      }
+      .buttonElement {
+        color: #ffffff;
+        background-color: #6e757c;
+        height: 40px;
+        width: 25%;
+        margin-top: 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 2%;
+        text-align: center;
+        font-size: 16px;
+      }
+      .terms > label {
+        font-size: 17px;
+        color: white;
+        margin-left: 10px;
+      }
+      .chekcboxElement {
+        margin-top: 15px;
+        border: none;
+        border-radius: 2%;
+      }
+      .paragraphElement {
+        color: white;
+        font-size: 17px;
+      }
+      .bodyElement {
+        font-family: "Roboto", sans-serif;
+        background-color: #192732;
+        font-size: 16px;
+        margin: 2rem 0.4rem;
+      }
+      .gender-selection {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .gender-selection li {
+        gap: 0.3rem;
+        float: left;
+        margin: 0 5px 0 0;
+        width: 80px;
+        height: 40px;
+        position: relative;
+      }
+
+      .gender-selection label,
+      .gender-selection input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .gender-selection input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+      .gender-selection p {
+        margin-right: 0.5rem;
+        color: white;
+      }
+      .gender-selection label {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .gender-selection label:hover {
+        background: #ddd;
+      }
+      .list li {
+        list-style-type: none;
+        margin: 5px;
+      }
+      .list {
+        display: flex;
+        padding: 0;
+        align-items: center;
+      }
+      .list label {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .list p {
+        margin-right: 0.2rem;
+        color: white;
+      }
+      .list label:hover {
+        background: #ddd;
+      }
+      .list input[type="radio"] {
+        display: none;
+      }
+    </style>
+
+    <div>
+      <form class="form-container">
+        <div>
+          <h1 class="h1">Register Today</h1>
+          <h3 class="h3">Fill in the data below.</h3>
+          <br />
+        </div>
+
+        <div>
+          <input
+            class="inputElement"
+            type="text"
+            id="fullname"
+            placeholder="Full Name"
+          />
+        </div>
+        <div>
+          <input
+            class="inputElement"
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div>
+          <select class="inputElement">
+            <option value="">Position</option>
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+          </select>
+        </div>
+        <div>
+          <input
+            class="inputElement"
+            type="password"
+            minlength="5"
+            maxlength="10"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div>
+          <ul class="list">
+            <li><p>Gender:</p></li>
+            <li>
+              <input type="radio" id="male" name="male" />
+              <label for="male">Male</label>
+            </li>
+            <li>
+              <input type="radio" id="a50" name="female" />
+              <label for="female">Female</label>
+            </li>
+            <li>
+              <input type="radio" id="other" name="other" />
+              <label for="other">Other</label>
+            </li>
+          </ul>
+        </div>
+        <div class="terms">
+          <input class="chekcboxElement" type="checkbox" id="isdatacorrect" />
+          <label>I confirm that all data are correct</label>
+        </div>
+        <div>
+          <input class="buttonElement" type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
