@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local vs Session storage</title>
+  </head>
+  <body>
+    <div>
+      <form name="NameList">
+        <div>
+          <label>Name: <input type="text" name="name" id="name" /></label>
+        </div>
+        <div>
+          <input type="button" class="save" value="save" onclick="SaveItem()" />
+          <input
+            type="button"
+            class="showAll"
+            value="showAll"
+            onclick="ShowItem()"
+          />
+          <input
+            type="button"
+            class="delete"
+            value="delete"
+            onclick="DeleteItem()"
+          />
+        </div>
+      </form>
+    </div>
+    <script>
+      function SaveItem() {
+        var oldName = localStorage.getItem("key");
+        var name = null;
+        if (oldName == null) {
+          name = document.getElementById("name").value;
+        } else {
+          name = oldName + "\\n" + document.getElementById("name").value;
+        }
+        localStorage.setItem("key", JSON.stringify(name));
+        alert("Your first name is saved.");
+      }
+
+      function ShowItem() {
+        var name = localStorage.getItem("key");
+        console.log(name);
+      }
+      function DeleteItem() {
+        localStorage.removeItem("key");
+        alert("Storage has been cleared");
+      }
+    </script>
+  </body>
+</html>
